@@ -1,0 +1,33 @@
+---
+import {Image} from "astro:assets";
+import avatar from "../assets/avatar.png"
+
+const profile = {
+  name: "Ziyun (Evan) Luo",
+  role: "Undergraduate Student",
+  institution: "UIUC",
+  socials: [
+    { icon: "fa-solid fa-envelope", link: "mailto:ziyun.luo@fastmail.com" },
+    { icon: "fa-brands fa-linkedin", link: "https://linkedin.com/in/ziyunluo" },
+    { icon: "fa-brands fa-bluesky", link: "https://bsky.app/profile/el42.cc" },
+    { icon: "fa-brands fa-github", link: "https://github.com/EvanLuo42" },
+    { icon: "fa-brands fa-orcid", link: "https://orcid.org/0009-0004-0803-7307" },
+  ]
+}
+---
+
+<div class="flex flex-col items-center space-y-5 w-[400px]">
+  <Image src={avatar} alt="Avatar" class="w-[270px] h-[270px] rounded-full"/>
+  <div class="flex flex-col items-center space-y-2">
+    <h1 class="text-4xl">Ziyun (Evan) Luo</h1>
+    <h2 class="text-2xl text-gray-500">Undergraduate Student</h2>
+    <a href="https://illinois.edu" class="text-2xl cursor-pointer text-blue-500 hover:underline">UIUC</a>
+  </div>
+  <ul class="flex space-x-3">
+    {
+      profile.socials.map(social =>
+        <li><a class="text-4xl text-blue-500" href={social.link}><i class={social.icon}/></a></li>
+      )
+    }
+  </ul>
+</div>

@@ -1,0 +1,20 @@
+---
+export type Education = {
+  degree: string
+  major: string
+  duration: string
+  school: string
+}
+
+type Props = Education
+
+const {degree, major, duration, school} = Astro.props
+---
+
+<div class="flex items-baseline space-x-2">
+  <i class="fa-solid fa-graduation-cap"/>
+  <div>
+    <p class="text-xl">{degree} in {major}, {duration}</p>
+    <p class="text-sm text-gray-500">{school}</p>
+  </div>
+</div>

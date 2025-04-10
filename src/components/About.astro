@@ -1,0 +1,35 @@
+---
+import Profile from "./Profile.astro";
+import {Content as AboutMe} from "../posts/about/about-me.md"
+import {Content as Interests} from "../posts/about/interests.md"
+import Prose from "./Prose.astro";
+import education from "../posts/about/education.yml"
+import EducationEntry, { Education } from "./EducationEntry.astro";
+---
+
+<div class="flex flex-row space-x-20">
+  <Profile/>
+  <div class="space-y-5 w-full">
+    <article class="w-full text-2xl font-normal">
+      <Prose>
+        <AboutMe></AboutMe>
+      </Prose>
+    </article>
+    <div class="flex space-x-30">
+      <div>
+        <h3 class="font-bold text-3xl">Interest</h3>
+        <Prose>
+          <Interests></Interests>
+        </Prose>
+      </div>
+      <div>
+        <h3 class="font-bold text-3xl mb-4">Education</h3>
+        {
+          education.education.map(({degree, major, duration, school}: Education) =>
+            <EducationEntry degree={degree} major={major} duration={duration} school={school} />
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>

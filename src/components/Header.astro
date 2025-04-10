@@ -1,0 +1,28 @@
+---
+type Route = {
+  name: string
+  tag: string
+}
+
+const routes: Route[] = [
+  { name: "About", tag: "about" },
+  { name: "News", tag: "news" },
+  { name: "Projects", tag: "projects" },
+  { name: "Publications", tag: "publications" },
+]
+const currentRoute = routes[0]
+---
+
+<header class="w-full flex flex-row h-[70px] items-center px-[294px] space-x-10 sticky shadow-md">
+  <h1 class="text-2xl font-bold">Ziyun (Evan) Luo</h1>
+  <ul class="flex flex-row space-x-5">
+    {
+      routes.map(route =>
+        <li class={`${currentRoute.tag === route.tag ? "font-bold text-blue-600" : ""} cursor-pointer`}>{route.name}</li>
+      )
+    }
+  </ul>
+  <button class="ml-auto">
+    <i class="fa-solid fa-moon"/>
+  </button>
+</header>
