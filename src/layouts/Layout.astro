@@ -17,7 +17,7 @@ import Header from "../components/Header.astro";
 	</head>
 	<body>
     <Header/>
-    <main class="px-[294px] mt-16">
+    <main class="mt-16">
       <slot />
     </main>
 	</body>
@@ -34,7 +34,7 @@ import Header from "../components/Header.astro";
 
 <script>
   import {config, dom, library} from "@fortawesome/fontawesome-svg-core";
-  import {faEnvelope, faGraduationCap, faMoon} from "@fortawesome/free-solid-svg-icons";
+  import {faBars, faEnvelope, faGraduationCap, faMoon} from "@fortawesome/free-solid-svg-icons";
   import {faBluesky, faGithub, faLinkedin, faOrcid} from "@fortawesome/free-brands-svg-icons";
 
   config.autoAddCss = false
@@ -45,7 +45,8 @@ import Header from "../components/Header.astro";
     faBluesky,
     faGithub,
     faEnvelope,
-    faOrcid
+    faOrcid,
+    faBars
   )
   dom.watch()
 </script>

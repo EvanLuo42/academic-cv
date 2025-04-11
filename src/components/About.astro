@@ -4,18 +4,18 @@ import {Content as AboutMe} from "../posts/about/about-me.md"
 import {Content as Interests} from "../posts/about/interests.md"
 import Prose from "./Prose.astro";
 import education from "../posts/about/education.yml"
-import EducationEntry, { Education } from "./EducationEntry.astro";
+import EducationEntry, { type Education } from "./EducationEntry.astro";
 ---
 
-<div class="flex flex-row space-x-20">
+<div class="flex flex-col items-center space-y-5 lg:items-start lg:flex-row justify-center">
   <Profile/>
-  <div class="space-y-5 w-full">
-    <article class="w-full text-2xl font-normal">
+  <div class="space-y-5 lg:w-[620px] xl:w-[820px] mx-5">
+    <div class="w-full text-2xl font-normal">
       <Prose>
         <AboutMe></AboutMe>
       </Prose>
-    </article>
-    <div class="flex space-x-30">
+    </div>
+    <div class="flex flex-col space-y-5 lg:flex-row lg:space-x-10">
       <div>
         <h3 class="font-bold text-3xl">Interest</h3>
         <Prose>
