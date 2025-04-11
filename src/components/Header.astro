@@ -13,7 +13,7 @@ const routes: Route[] = [
 const currentRoute = routes[0]
 ---
 
-<header class="w-full sticky top-0">
+<header class="w-full fixed top-0">
   <div class="flex flex-row shadow-md items-center space-x-3 px-5 h-12 bg-white lg:w-full lg:h-[70px] lg:px-10 lg:space-x-10">
     <button id="bar" class="lg:hidden cursor-pointer"><i class="fa-solid fa-bars"/></button>
     <h1 class="text-xl self-center lg:text-2xl font-bold">Ziyun (Evan) Luo</h1>
@@ -24,9 +24,22 @@ const currentRoute = routes[0]
         )
       }
     </ul>
-    <button class="ml-auto">
-      <i class="fa-solid fa-moon"/>
-    </button>
+    <div class="ml-auto w-20">
+      <button id="theme" class="float-right">
+        <i class="fa-solid fa-moon"/>
+      </button>
+      <ul class="border float-end">
+        <li>
+          Dark
+        </li>
+        <li>
+          Light
+        </li>
+        <li>
+          System
+        </li>
+      </ul>
+    </div>
   </div>
   <ul id="menu" class="hidden flex flex-col space-y-2 bg-white py-3">
     {
@@ -40,6 +53,10 @@ const currentRoute = routes[0]
     const menu = document.getElementById("menu")
     button?.addEventListener("click", () => {
       menu?.classList.toggle("hidden")
+    })
+    const theme = document.getElementById("theme")
+    theme?.addEventListener("click", () => {
+
     })
   </script>
 </header>

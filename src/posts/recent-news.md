@@ -1,0 +1,5 @@
+- **September 2024**: Keynote talk at [ECCV 2024 Workshop: Autonomous Vehicles meet Multimodal Foundation Models](https://mllmav.github.io/).
+- **September 2024**: Keynote talk at [ECCV 2024 Workshop: Autonomous Vehicles meet Multimodal Foundation Models](https://mllmav.github.io/).
+- **September 2024**: Keynote talk at [ECCV 2024 Workshop: Autonomous Vehicles meet Multimodal Foundation Models](https://mllmav.github.io/).
+- **September 2024**: Keynote talk at [ECCV 2024 Workshop: Autonomous Vehicles meet Multimodal Foundation Models](https://mllmav.github.io/).
+- **September 2024**: Keynote talk at [ECCV 2024 Workshop: Autonomous Vehicles meet Multimodal Foundation Models](https://mllmav.github.io/).

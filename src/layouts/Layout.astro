@@ -3,6 +3,7 @@ import "../styles/global.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -17,9 +18,10 @@ import Header from "../components/Header.astro";
 	</head>
 	<body>
     <Header/>
-    <main class="mt-16">
+    <main class="mt-12 lg:mt-[70px]">
       <slot />
     </main>
+		<Footer/>
 	</body>
 </html>
 
@@ -35,7 +37,14 @@ import Header from "../components/Header.astro";
 <script>
   import {config, dom, library} from "@fortawesome/fontawesome-svg-core";
   import {faBars, faEnvelope, faGraduationCap, faMoon} from "@fortawesome/free-solid-svg-icons";
-  import {faBluesky, faGithub, faLinkedin, faOrcid} from "@fortawesome/free-brands-svg-icons";
+	import {
+		faBluesky,
+		faCreativeCommons,
+		faCreativeCommonsBy, faCreativeCommonsNc, faCreativeCommonsNd,
+		faGithub,
+		faLinkedin,
+		faOrcid
+	} from "@fortawesome/free-brands-svg-icons";
 
   config.autoAddCss = false
   library.add(
@@ -46,7 +55,11 @@ import Header from "../components/Header.astro";
     faGithub,
     faEnvelope,
     faOrcid,
-    faBars
+    faBars,
+		faCreativeCommons,
+		faCreativeCommonsBy,
+		faCreativeCommonsNc,
+		faCreativeCommonsNd
   )
   dom.watch()
 </script>

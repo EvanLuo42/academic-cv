@@ -7,7 +7,7 @@ import education from "../posts/about/education.yml"
 import EducationEntry, { type Education } from "./EducationEntry.astro";
 ---
 
-<div class="flex flex-col items-center space-y-5 lg:items-start lg:flex-row justify-center">
+<div id="about" class="flex flex-col items-center space-y-5 lg:items-start lg:flex-row justify-center py-14">
   <Profile/>
   <div class="space-y-5 lg:w-[620px] xl:w-[820px] mx-5">
     <div class="w-full text-2xl font-normal">
@@ -15,7 +15,7 @@ import EducationEntry, { type Education } from "./EducationEntry.astro";
         <AboutMe></AboutMe>
       </Prose>
     </div>
-    <div class="flex flex-col space-y-5 lg:flex-row lg:space-x-10">
+    <div class="flex flex-col space-y-3 lg:flex-row lg:space-x-10">
       <div>
         <h3 class="font-bold text-3xl">Interest</h3>
         <Prose>
