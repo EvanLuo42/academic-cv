@@ -24,15 +24,15 @@ const props = Astro.props
 
 <div class="flex space-x-2">
   <div class="w-full mx-10 xl:w-[660px] space-y-2">
-    <h3 class="text-2xl font-bold">{props.title}</h3>
-    <p class="text-lg line-clamp-2">{props.abstract}</p>
+    <h3 class="text-2xl font-bold dark:text-white">{props.title}</h3>
+    <p class="text-lg line-clamp-2 dark:text-white">{props.abstract}</p>
     <div class="space-y-1">
-      <p class="text-sm text-gray-500">{props.authors.reduce((acc, currentValue) => `${acc}, ${currentValue}`)}</p>
-      <p class="text-sm text-gray-500">{props.date} · In {props.place}</p>
+      <p class="text-sm text-gray-500 dark:text-gray-400">{props.authors.reduce((acc, currentValue) => `${acc}, ${currentValue}`)}</p>
+      <p class="text-sm text-gray-500 dark:text-gray-400">{props.date} · In {props.place}</p>
     </div>
     <div class="flex space-x-3">
       {props.resources.map((resource) =>
-        <button class="py0.5 px-2 border border-blue-500 rounded-sm"><a class="text-blue-500" href={resource.link}>{resource.name}</a></button>
+        <button class="py0.5 px-2 border border-blue-500 dark:border-blue-300-blue-300 rounded-sm"><a class="text-blue-500 dark:text-blue-300" href={resource.link}>{resource.name}</a></button>
       )}
     </div>
   </div>

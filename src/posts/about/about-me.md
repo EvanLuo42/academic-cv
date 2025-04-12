@@ -1,5 +1,3 @@
-## About Me
-
 I’m an undergrad at UIUC, class of 2029, studying Information Science with a focus on Computer Graphics, especially physically-based rendering and path-tracing. I’m currently diving into numerical computation and have experience with Unity, Unreal Engine, operating systems, web development, and embedded systems.
 
 I’ve been playing piano since I was 4, which helps fuel my creativity. I’m skilled in Julia, Python, C#, C/C++, and Rust, and I love using these for everything from school projects to game development. In my free time, you’ll find me playing games like The Legend of Zelda and Splatoon, which inspire my work in game design.

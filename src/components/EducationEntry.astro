@@ -12,9 +12,9 @@ const {degree, major, duration, school} = Astro.props
 ---
 
 <div class="flex items-baseline space-x-2">
-  <i class="fa-solid fa-graduation-cap"/>
+  <i class="fa-solid fa-graduation-cap dark:text-white"/>
   <div>
-    <p class="lg:text-xl">{degree} in {major}, {duration}</p>
-    <p class="text-sm text-gray-500">{school}</p>
+    <p class="lg:text-xl dark:text-white">{degree} in {major}, {duration}</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400">{school}</p>
   </div>
 </div>

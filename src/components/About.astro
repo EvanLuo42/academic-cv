@@ -17,13 +17,13 @@ import EducationEntry, { type Education } from "./EducationEntry.astro";
     </div>
     <div class="flex flex-col space-y-3 lg:flex-row lg:space-x-10">
       <div>
-        <h3 class="font-bold text-3xl">Interest</h3>
+        <h3 class="font-bold text-3xl dark:text-white">Interest</h3>
         <Prose>
           <Interests></Interests>
         </Prose>
       </div>
       <div>
-        <h3 class="font-bold text-3xl mb-4">Education</h3>
+        <h3 class="font-bold text-3xl mb-4 dark:text-white">Education</h3>
         {
           education.education.map(({degree, major, duration, school}: Education) =>
             <EducationEntry degree={degree} major={major} duration={duration} school={school} />

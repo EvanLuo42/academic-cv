@@ -19,14 +19,14 @@ const profile = {
 <div class="flex flex-col items-center space-y-5 w-[400px]">
   <Image src={avatar} alt="Avatar" class="w-[270px] h-[270px] rounded-full"/>
   <div class="flex flex-col items-center space-y-2">
-    <h1 class="text-4xl">Ziyun (Evan) Luo</h1>
-    <h2 class="text-2xl text-gray-500">Undergraduate Student</h2>
-    <a href="https://illinois.edu" class="text-2xl cursor-pointer text-blue-500 hover:underline">UIUC</a>
+    <h1 class="text-4xl dark:text-white">Ziyun (Evan) Luo</h1>
+    <h2 class="text-2xl text-gray-500 dark:text-gray-400">Undergraduate Student</h2>
+    <a href="https://illinois.edu" class="text-2xl cursor-pointer text-blue-500 dark:text-blue-300 hover:underline">UIUC</a>
   </div>
   <ul class="flex space-x-3">
     {
       profile.socials.map(social =>
-        <li><a class="text-4xl text-blue-500" href={social.link}><i class={social.icon}/></a></li>
+        <li><a class="text-4xl text-blue-500 dark:text-blue-300" href={social.link}><i class={social.icon}/></a></li>
       )
     }
   </ul>
