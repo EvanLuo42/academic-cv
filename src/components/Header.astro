@@ -24,32 +24,6 @@ const currentRoute = routes[0]
         )
       }
     </ul>
-    <script>
-      function toggleTheme() {
-        document.documentElement.classList.toggle(
-          "dark",
-          localStorage.theme === "dark" ||
-          (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
-        );
-      }
-
-      function toggleDark() {
-        localStorage.theme = "dark"
-        toggleTheme()
-      }
-
-      function toggleLight() {
-        localStorage.theme = "light"
-        toggleTheme()
-      }
-
-      function toggleSystem() {
-        localStorage.removeItem("theme")
-        console.log("ABC")
-        toggleTheme()
-      }
-      toggleTheme()
-    </script>
     <div class="ml-auto w-20 relative group">
       <button id="theme" class="float-right cursor-pointer" aria-expanded="true" aria-haspopup="true" aria-controls="theme-menu">
         <i class="fa-solid fa-moon dark:text-white"/>
@@ -109,5 +83,6 @@ const currentRoute = routes[0]
     dark?.addEventListener("click", toggleDark)
     light?.addEventListener("click", toggleLight)
     system?.addEventListener("click", toggleSystem)
+    toggleTheme()
   </script>
 </header>
